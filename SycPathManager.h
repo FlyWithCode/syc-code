@@ -1,5 +1,5 @@
 //
-//  DCTSPathManager.h
+//  SycPathManager.h
 //  DictSDK
 //
 //  Created by syc on 2016/12/14.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DCTSPathManager : NSObject
+@interface SycPathManager : NSObject
 
 + (instancetype)instance;
 

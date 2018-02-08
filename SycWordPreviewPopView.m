@@ -1,5 +1,5 @@
 //
-//  DctcWordPreviewPopView.m
+//  SycWordPreviewPopView.m
 //  DictComponent
 //
 //  Created by syc on 2017/12/19.
@@ -13,9 +13,9 @@
 #import "DictComponentHelper.h"
 #import "DctcConfig.h"
 #import "DctcCommonDefine.h"
-#import "DctcWordPreviewPopView.h"
+#import "SycWordPreviewPopView.h"
 
-@interface DctcWordPreviewPopView ()
+@interface SycWordPreviewPopView ()
 @property (nonatomic, strong) UILabel *wordLable;
 @property (nonatomic, strong) UILabel *showMessageLable;
 
@@ -27,7 +27,7 @@
 @end
 
 
-@implementation DctcWordPreviewPopView
+@implementation SycWordPreviewPopView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

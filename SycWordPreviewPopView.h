@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol DctcWordPreviewPopViewDelegate <NSObject>
+@protocol SycWordPreviewPopViewDelegate <NSObject>
 
 - (void)didSelectWordPopViewMaskView;
 
 @end
 
 
-@interface DctcWordPreviewPopView : UIView
+@interface SycWordPreviewPopView : UIView
 
 @property (nonatomic, weak) id delegate;
 

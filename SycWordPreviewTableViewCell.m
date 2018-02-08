@@ -1,12 +1,12 @@
 //
-//  DctcWordPreviewTableViewCell.m
+//  SycWordPreviewTableViewCell.m
 //  DictComponent
 //
 //  Created by syc on 2017/12/1.
 //  Copyright © 2017年 ND. All rights reserved.
 //
 
-#import "DctcWordPreviewTableViewCell.h"
+#import "SycWordPreviewTableViewCell.h"
 #import <Masonry/Masonry.h>
 #import <libextobjc/EXTScope.h>
 #import "UIColor+Extension.h"
@@ -17,7 +17,7 @@
 #import "DctcCommonDefine.h"
 #import "DctcWordDetailJSBridgeViewModel.h"
 
-@interface DctcWordPreviewTableViewCell ()
+@interface SycWordPreviewTableViewCell ()
 
 @property (nonatomic, strong) UILabel *pinYinLable;
 @property (nonatomic, strong) UILabel *wordLable;
@@ -35,7 +35,7 @@
 @property (nonatomic, strong) UIImageView *line;
 
 @end
-@implementation DctcWordPreviewTableViewCell
+@implementation SycWordPreviewTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifie{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifie]) {
@@ -45,7 +45,7 @@
 }
 
 + (NSString*)indentify {
-    return @"DctcWordPreviewTableViewCell";
+    return @"SycWordPreviewTableViewCell";
 }
 
 

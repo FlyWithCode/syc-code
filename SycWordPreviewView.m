@@ -1,5 +1,5 @@
 //
-//  DctcWordPreviewView.m
+//  SycWordPreviewView.m
 //  DictComponent
 //
 //  Created by syc on 2017/12/1.
@@ -7,7 +7,7 @@
 //
 #define KMaxHeight 282
 
-#import "DctcWordPreviewView.h"
+#import "SycWordPreviewView.h"
 #import <Masonry/Masonry.h>
 #import <libextobjc/EXTScope.h>
 #import <DictSDK/DCTSManager.h>
@@ -24,7 +24,7 @@
 #import "DctcWordDetailJSBridgeViewModel.h"
 
 
-@interface DctcWordPreviewView () <UITableViewDelegate,UITableViewDataSource,DctcWordPreviewTableViewCellDelegate>
+@interface SycWordPreviewView () <UITableViewDelegate,UITableViewDataSource,SycWordPreviewTableViewCellDelegate>
 @property (nonatomic, strong) UILabel *wordLable;
 @property (nonatomic, strong) UIImageView *wordBgImageView;
 
@@ -51,7 +51,7 @@
 
 @end
 
-@implementation DctcWordPreviewView
+@implementation SycWordPreviewView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -177,7 +177,7 @@
 
 - (void)updateSubPageView {
     @weakify(self);
-    if (self.type == DctcWordPreviewViewTypeWywCarmer) {
+    if (self.type == SycWordPreviewViewTypeWywCarmer) {
         [self hideBhAndBs:YES];
         [self.line mas_remakeConstraints:^(MASConstraintMaker *make) {
             @strongify(self);
@@ -185,7 +185,7 @@
             make.size.mas_equalTo(CGSizeMake(600*kScale, 0.5));
             make.centerX.equalTo(self.mas_centerX);
         }];
-    }else if (self.type == DctcWordPreviewViewTypeDefault) {
+    }else if (self.type == SycWordPreviewViewTypeDefault) {
         [self hideBhAndBs:NO];
         [self.line mas_remakeConstraints:^(MASConstraintMaker *make) {
             @strongify(self);
@@ -205,7 +205,7 @@
 
 - (void)updatePageViewLayout {
     CGFloat height = 430*kScale;
-    if (self.type == DctcWordPreviewViewTypeWywCarmer) {
+    if (self.type == SycWordPreviewViewTypeWywCarmer) {
         height = 372*kScale;
     }
     CGFloat centerY = (SCREEN_HEIGHT - 430*kScale)/2;
@@ -214,7 +214,7 @@
             make.size.mas_equalTo(CGSizeMake(640*kScale, KMaxHeight*kScale));
         }];
         height = 556*kScale;
-        if (self.type == DctcWordPreviewViewTypeWywCarmer) {
+        if (self.type == SycWordPreviewViewTypeWywCarmer) {
             height = 488*kScale;
         }
         centerY = (SCREEN_HEIGHT - height)/2;
@@ -358,7 +358,7 @@
    }
 }
 
-#pragma mark - DctcWordPreviewTableViewCellDelegate
+#pragma mark - SycWordPreviewTableViewCellDelegate
 
 - (void)didSelectedCollectAction:(DctcWordPreviewTableViewCell *)cell {
     MUPLogDebug(@"didSelectedCollectAction");

@@ -1,12 +1,12 @@
 //
-//  DCTSPathManager.m
+//  SycPathManager.m
 //  DictSDK
 //
 //  Created by syc on 2016/12/14.
 //  Copyright © 2016年 ND. All rights reserved.
 //
 
-#import "DCTSPathManager.h"
+#import "SycPathManager.h"
 #import "DCTSNetErrorCode.h"
 #import "DCTSNetErrorCodeHelper.h"
 #import "NSString+DCTSExtension.h"
@@ -15,7 +15,7 @@
 #define IMAGE_URL_REPALCE @"xxxx"
 #define OCR_FILE_NAME @"xxxxx"
 
-@interface DCTSPathManager()
+@interface SycPathManager()
 
 @property (nonatomic,strong) NSURL *databaseRoot;  //数据库文件根目录
 @property (nonatomic,strong) NSURL *packageRoot;   //离线包文件根目录
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation DCTSPathManager
+@implementation SycPathManager
 
 + (instancetype)instance {
     static id _instance = nil;

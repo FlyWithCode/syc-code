@@ -1,5 +1,5 @@
 //
-//  DctcWordPreviewView.h
+//  SycWordPreviewView.h
 //  DictComponent
 //
 //  Created by syc on 2017/12/1.
@@ -11,12 +11,12 @@
 #import "DCTSCrossSearchModel.h"
 
 
-typedef NS_ENUM(NSUInteger, DctcWordPreviewViewType) {
-    DctcWordPreviewViewTypeDefault = 0,                //  默认类型
-    DctcWordPreviewViewTypeWywCarmer = 1,              //  文言文摄像头取字
+typedef NS_ENUM(NSUInteger, SycWordPreviewViewType) {
+    SycWordPreviewViewTypeDefault = 0,                //  默认类型
+    SycWordPreviewViewTypeWywCarmer = 1,              //  文言文摄像头取字
 };
 
-@protocol DctcWordPreviewViewDelegate <NSObject>
+@protocol SycWordPreviewViewDelegate <NSObject>
 
 - (void)didSelectRowWithModel:(DCTSCrossSearchModel *)model;
 
@@ -24,11 +24,11 @@ typedef NS_ENUM(NSUInteger, DctcWordPreviewViewType) {
 
 @end
 
-@interface DctcWordPreviewView : UIView
+@interface SycWordPreviewView : UIView
 
 @property (nonatomic, weak) id delegate;
 
-@property (nonatomic, assign) DctcWordPreviewViewType type;
+@property (nonatomic, assign) SycWordPreviewViewType type;
 
 - (void)updateData:(NSArray *)data ;
 

@@ -1,5 +1,5 @@
 //
-//  DctcWordPreviewTableViewCell.h
+//  SycWordPreviewTableViewCell.h
 //  DictComponent
 //
 //  Created by syc on 2017/12/1.
@@ -10,18 +10,18 @@
 #import <DictSDK/DCTSCrossSearchModel.h>
 
 
-@class DctcWordPreviewTableViewCell;
+@class SycWordPreviewTableViewCell;
 
-@protocol DctcWordPreviewTableViewCellDelegate <NSObject>
+@protocol SycWordPreviewTableViewCellDelegate <NSObject>
 
-- (void)didSelectedCollectAction:(DctcWordPreviewTableViewCell *)cell;
+- (void)didSelectedCollectAction:(SycWordPreviewTableViewCell *)cell;
 
-- (void)didSelectedVoiceAction:(DctcWordPreviewTableViewCell *)cell;
+- (void)didSelectedVoiceAction:(SycWordPreviewTableViewCell *)cell;
 
 @end
 
 
-@interface DctcWordPreviewTableViewCell : UITableViewCell
+@interface SycWordPreviewTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) id delegate;
 @property (nonatomic ,strong) UIImageView *voiceImageView;
